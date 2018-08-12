@@ -1,13 +1,13 @@
-﻿using System;
+﻿using LearnEssential.Interface;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
-using ThreadingEssential.Interface;
 
 namespace ThreadingEssential.BAdvanced
 {
-	class CountDown : ILearner
+	internal class CountDown : ILearner
 	{
-		CountdownEvent countdownEvent = new CountdownEvent(5);
+		private CountdownEvent countdownEvent = new CountdownEvent(5);
 
 		public void Practice(string[] args)
 		{

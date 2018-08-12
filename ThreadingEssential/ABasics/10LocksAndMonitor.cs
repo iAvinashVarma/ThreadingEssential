@@ -1,6 +1,6 @@
-﻿using System;
+﻿using LearnEssential.Interface;
+using System;
 using System.Threading.Tasks;
-using ThreadingEssential.Interface;
 using ThreadingEssential.Model;
 
 namespace ThreadingEssential.ABasics

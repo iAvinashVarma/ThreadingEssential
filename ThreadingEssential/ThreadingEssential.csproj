@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -64,11 +67,21 @@
     <Compile Include="BAdvanced\06CountDown.cs" />
     <Compile Include="BAdvanced\07TPLIntro.cs" />
     <Compile Include="BAdvanced\08ParallelVsNormal.cs" />
+    <Compile Include="BAdvanced\09Cancellation.cs" />
+    <Compile Include="BAdvanced\10ContinuationWithState.cs" />
+    <Compile Include="BAdvanced\11TaskCompletionSource.cs" />
+    <Compile Include="BAdvanced\12PLINQIntro.cs" />
+    <Compile Include="BAdvanced\13PLINQDegreeParallelism.cs" />
+    <Compile Include="BAdvanced\14PLINQForAll.cs" />
+    <Compile Include="BAdvanced\15PLINQMergeOptions.cs" />
+    <Compile Include="BAdvanced\16TAPIntro.cs" />
+    <Compile Include="CAsync\01DownloadWinForm.cs" />
     <Compile Include="Extension\Enumerables.cs" />
-    <Compile Include="Interface\ILearner.cs" />
-    <Compile Include="Learn\Factory.cs" />
+    <Compile Include="Learn\LearnerFactory.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ABasics\02SharedResources.cs" />
@@ -79,6 +92,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DownloadForm\DownloadForm.csproj">
+      <Project>{8254c9e1-2e84-4011-8f7e-723e5369de0d}</Project>
+      <Name>DownloadForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LearnEssential\LearnEssential.csproj">
+      <Project>{51b8e6a1-1fe9-48a6-99ab-6612369a6d6c}</Project>
+      <Name>LearnEssential</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ThreadAffinity\ThreadAffinity.csproj">
       <Project>{18a3d088-84d6-46c5-a86e-d6325e49cc95}</Project>
       <Name>ThreadAffinity</Name>

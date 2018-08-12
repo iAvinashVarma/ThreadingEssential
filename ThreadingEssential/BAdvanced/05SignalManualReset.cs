@@ -1,7 +1,7 @@
-﻿using System;
+﻿using LearnEssential.Interface;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
-using ThreadingEssential.Interface;
 
 namespace ThreadingEssential.BAdvanced
 {

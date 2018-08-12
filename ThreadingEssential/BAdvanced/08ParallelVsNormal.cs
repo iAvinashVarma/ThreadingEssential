@@ -1,35 +1,33 @@
-﻿using System;
+﻿using LearnEssential.Interface;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using ThreadingEssential.Extension;
-using ThreadingEssential.Interface;
 
 namespace ThreadingEssential.BAdvanced
 {
-	class ParallelVsNormal : ILearner
+	internal class ParallelVsNormal : ILearner
 	{
 		public void Practice(string[] args)
 		{
 			var path = Directory.GetCurrentDirectory();
 			var picturesPath = Path.Combine(Environment.ExpandEnvironmentVariables("%USERPROFILE%"), @"Pictures\CodeOfConduct");
-			 var files = Directory.GetFiles(picturesPath, "*.*", SearchOption.AllDirectories)
-						.Where(s => s.EndsWith(".png", StringComparison.OrdinalIgnoreCase) || s.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase)); ;
+			var files = Directory.GetFiles(picturesPath, "*.*", SearchOption.AllDirectories)
+					   .Where(s => s.EndsWith(".png", StringComparison.OrdinalIgnoreCase) || s.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase)); ;
 			var normalExecutionPath = Path.Combine(path, "NormalExecutionPath");
 			var parallelExecutionPath = Path.Combine(path, "ParallelExecutionPath");
-			Invoke(NormalExecution, files, normalExecutionPath);
-			Invoke(ParallelExecution, files, parallelExecutionPath);
+			Invoke(files, normalExecutionPath, NormalExecution);
+			Invoke(files, parallelExecutionPath, ParallelExecution);
 		}
 
-		private void Invoke(Action<IEnumerable<string>, string> action, IEnumerable<string> files, string alteredPath)
+		private void Invoke(IEnumerable<string> files, string alteredPath, Action<IEnumerable<string>, string> action)
 		{
-			Directory.Delete(alteredPath);
+			DeleteDirectory(alteredPath);
 			Directory.CreateDirectory(alteredPath);
 			var sw = new Stopwatch();
 			sw.Start();
@@ -61,8 +59,34 @@ namespace ThreadingEssential.BAdvanced
 			{
 				fileBitMap.RotateFlip(RotateFlipType.Rotate180FlipX);
 				fileBitMap.Save(Path.Combine(alteredPath, file));
-				//Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId}");
+				Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId}");
 			};
+		}
+
+		private void DeleteDirectory(string targetDirectory)
+		{
+			try
+			{
+				var files = Directory.GetFiles(targetDirectory);
+				var dirs = Directory.GetDirectories(targetDirectory);
+
+				files.ForEach(f =>
+				{
+					File.SetAttributes(f, FileAttributes.Normal);
+					File.Delete(f);
+				});
+
+				dirs.ForEach(d =>
+				{
+					DeleteDirectory(d);
+				});
+
+				Directory.Delete(targetDirectory, false);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex);
+			}
 		}
 	}
 }

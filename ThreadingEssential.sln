@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadingEssential", "Threa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadAffinity", "ThreadAffinity\ThreadAffinity.csproj", "{18A3D088-84D6-46C5-A86E-D6325E49CC95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncEssentialUnitTest", "AsyncEssentialUnitTest\AsyncEssentialUnitTest.csproj", "{B915C072-FBF7-41FF-836E-CD3DE1B443D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadForm", "DownloadForm\DownloadForm.csproj", "{8254C9E1-2E84-4011-8F7E-723E5369DE0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnEssential", "LearnEssential\LearnEssential.csproj", "{51B8E6A1-1FE9-48A6-99AB-6612369A6D6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +27,18 @@ Global
 		{18A3D088-84D6-46C5-A86E-D6325E49CC95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18A3D088-84D6-46C5-A86E-D6325E49CC95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18A3D088-84D6-46C5-A86E-D6325E49CC95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B915C072-FBF7-41FF-836E-CD3DE1B443D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B915C072-FBF7-41FF-836E-CD3DE1B443D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B915C072-FBF7-41FF-836E-CD3DE1B443D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B915C072-FBF7-41FF-836E-CD3DE1B443D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8254C9E1-2E84-4011-8F7E-723E5369DE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8254C9E1-2E84-4011-8F7E-723E5369DE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8254C9E1-2E84-4011-8F7E-723E5369DE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8254C9E1-2E84-4011-8F7E-723E5369DE0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51B8E6A1-1FE9-48A6-99AB-6612369A6D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B8E6A1-1FE9-48A6-99AB-6612369A6D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B8E6A1-1FE9-48A6-99AB-6612369A6D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B8E6A1-1FE9-48A6-99AB-6612369A6D6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

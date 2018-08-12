@@ -1,6 +1,6 @@
-﻿using System;
+﻿using LearnEssential.Interface;
+using System;
 using System.Threading;
-using ThreadingEssential.Interface;
 
 namespace ThreadingEssential.ABasics
 {

@@ -1,4 +1,4 @@
-﻿namespace ThreadingEssential.Interface
+﻿namespace LearnEssential.Interface
 {
 	public interface ILearner
 	{

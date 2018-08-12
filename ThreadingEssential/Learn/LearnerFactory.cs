@@ -1,15 +1,16 @@
-﻿using System.Text;
+﻿using LearnEssential.Interface;
+using System.Text;
 using ThreadingEssential.ABasics;
 using ThreadingEssential.BAdvanced;
-using ThreadingEssential.Interface;
+using ThreadingEssential.CAsync;
 
 namespace ThreadingEssential.Learn
 {
-	internal class Factory
+	internal class LearnerFactory
 	{
 		private EssentialMode essentialMode;
 
-		public Factory(EssentialMode essentialMode) => this.essentialMode = essentialMode;
+		public LearnerFactory(EssentialMode essentialMode) => this.essentialMode = essentialMode;
 
 		private string BasicConceptHelp
 		{
@@ -50,9 +51,31 @@ namespace ThreadingEssential.Learn
 				sb.AppendLine("4 => TwoWaySignal");
 				sb.AppendLine("5 => SignalManualEvent");
 				sb.AppendLine("6 => CountDown");
-				sb.AppendLine("** II. Task Parallel Library **");
+				sb.AppendLine("** II. Task Parallel Library (TPL) **");
 				sb.AppendLine("7 => TPLIntro");
 				sb.AppendLine("8 => ParallelVsNormal");
+				sb.AppendLine("9 => Cancellation");
+				sb.AppendLine("10 => ContinuationWithState");
+				sb.AppendLine("11 => TaskCompletionSource");
+				sb.AppendLine("** III. Parallel LINQ (PLINQ) **");
+				sb.AppendLine("12 => PLINQIntro");
+				sb.AppendLine("13 => PLINQDegreeParallelism");
+				sb.AppendLine("14 => PLINQForAll");
+				sb.AppendLine("15 => PLINQMergeOptions");
+				sb.AppendLine("** IV. Task-Based Asynchronous Pattern (TAP) **");
+				sb.AppendLine("16 => TAPIntro");
+
+				return sb.ToString();
+			}
+		}
+
+		private string AsyncConceptHelp
+		{
+			get
+			{
+				var sb = new StringBuilder();
+				sb.AppendLine("** I. Windows Forms **");
+				sb.AppendLine("1 => DownloadForm");
 				return sb.ToString();
 			}
 		}
@@ -71,6 +94,10 @@ namespace ThreadingEssential.Learn
 					case EssentialMode.Basic:
 						help = BasicConceptHelp;
 						break;
+
+					case EssentialMode.Async:
+						help = AsyncConceptHelp;
+						break;
 				}
 				return help;
 			}
@@ -87,6 +114,10 @@ namespace ThreadingEssential.Learn
 
 				case EssentialMode.Basic:
 					learner = GetBasicLearner(result);
+					break;
+
+				case EssentialMode.Async:
+					learner = GetAsyncLearner(result);
 					break;
 			}
 			return learner;
@@ -201,8 +232,56 @@ namespace ThreadingEssential.Learn
 					learner = new ParallelVsNormal();
 					break;
 
+				case 9:
+					learner = new Cancellation();
+					break;
+
+				case 10:
+					learner = new ContinuationWithState();
+					break;
+
+				case 11:
+					learner = new TaskCompletionSource();
+					break;
+
+				case 12:
+					learner = new PLINQIntro();
+					break;
+
+				case 13:
+					learner = new PLINQDegreeParallelism();
+					break;
+
+				case 14:
+					learner = new PLINQForAll();
+					break;
+
+				case 15:
+					learner = new PLINQMergeOptions();
+					break;
+
+				case 16:
+					learner = new TAPIntro();
+					break;
+
 				default:
 					learner = new ThreadSafety();
+					break;
+			}
+			return learner;
+		}
+
+		private ILearner GetAsyncLearner(int result)
+		{
+			ILearner learner = null;
+			switch (result)
+			{
+				case 1:
+					learner = new DownloadWinForm();
+					break;
+
+				default:
+					learner = new DownloadWinForm();
 					break;
 			}
 			return learner;
@@ -212,6 +291,7 @@ namespace ThreadingEssential.Learn
 	public enum EssentialMode
 	{
 		Basic = 1,
-		Advanced = 2
+		Advanced = 2,
+		Async = 3
 	}
 }

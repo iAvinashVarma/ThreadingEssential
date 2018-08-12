@@ -1,5 +1,5 @@
-﻿using System;
-using ThreadingEssential.Interface;
+﻿using LearnEssential.Interface;
+using System;
 
 namespace ThreadingEssential.Learn
 {
@@ -16,10 +16,10 @@ namespace ThreadingEssential.Learn
 
 		public void Practice(string[] args)
 		{
-			Console.Write("Enter Mode (1 => Basics or 2 => Advanced) : ");
+			Console.Write("Enter Mode (1 => Basics / 2 => Advanced / 3 => Async) : ");
 			int.TryParse(Console.ReadLine(), out int mode);
 			var essentialMode = mode != 0 ? (EssentialMode)mode : EssentialMode.Basic;
-			var factory = new Factory(essentialMode);
+			var factory = new LearnerFactory(essentialMode);
 			Console.Write("{0} Concepts:{1}{2}Enter {0} concept number (E.g. 1) : ", essentialMode, Environment.NewLine, factory.ConceptHelp);
 			int.TryParse(Console.ReadLine(), out int result);
 			ILearner learner = factory.GetLearner(result);

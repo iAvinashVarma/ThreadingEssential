@@ -1,8 +1,8 @@
-﻿using System;
+﻿using LearnEssential.Interface;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using ThreadingEssential.Interface;
 
 namespace ThreadingEssential.ABasics
 {
