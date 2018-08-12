@@ -1,5 +1,4 @@
-﻿using LearnInfra;
-using LearnInfra.Interface;
+﻿using LearnInfra.Interface;
 using LearnInfra.Model;
 using System;
 using System.Threading;

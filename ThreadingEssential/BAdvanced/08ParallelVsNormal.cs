@@ -1,4 +1,5 @@
-﻿using LearnInfra.Interface;
+﻿using LearnInfra.Extension;
+using LearnInfra.Interface;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +8,6 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using LearnInfra.Extension;
 
 namespace ThreadingEssential.BAdvanced
 {

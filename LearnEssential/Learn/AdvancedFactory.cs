@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LearnInfra.Extension;
 using LearnInfra.Interface;
+using System.Reflection;
+using System.Text;
 using ThreadingEssential.BAdvanced;
 
 namespace LearnEssential.Learn
@@ -15,6 +13,7 @@ namespace LearnEssential.Learn
 			get
 			{
 				var sb = new StringBuilder();
+				var learning = Classes.GetTypesInNamespace<ILearner>(Assembly.LoadFrom("ThreadingEssential.dll"), "ThreadingEssential.BAdvanced");
 				sb.AppendLine("** I. Signaling and Thread Concepts **");
 				sb.AppendLine("1 => ThreadSafety");
 				sb.AppendLine("2 => ThreadAffinityApp");

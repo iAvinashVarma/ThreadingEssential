@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LearnInfra.Extension
 {
@@ -10,7 +7,7 @@ namespace LearnInfra.Extension
 	{
 		public static Dictionary<int, string> GetDictionary<T>(this T @type)
 		{
-			if(typeof(T).IsEnum)
+			if (typeof(T).IsEnum)
 			{
 				var dictionary = new Dictionary<int, string>();
 				var values = Enum.GetValues(typeof(T));

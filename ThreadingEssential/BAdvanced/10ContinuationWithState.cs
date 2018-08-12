@@ -1,11 +1,10 @@
-﻿using LearnInfra;
+﻿using LearnInfra.Extension;
 using LearnInfra.Interface;
+using LearnInfra.Model;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using LearnInfra.Extension;
-using LearnInfra.Model;
 
 namespace ThreadingEssential.BAdvanced
 {

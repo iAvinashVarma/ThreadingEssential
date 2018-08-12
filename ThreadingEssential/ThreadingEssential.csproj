@@ -91,6 +91,11 @@
     <Compile Include="BAdvanced\15PLINQMergeOptions.cs" />
     <Compile Include="BAdvanced\16TAPIntro.cs" />
     <Compile Include="CAsync\01DownloadWinForm.cs" />
+    <Compile Include="CAsync\02Threads.cs" />
+    <Compile Include="CAsync\03ThreadSafety.cs" />
+    <Compile Include="CAsync\04EasyPools.cs" />
+    <Compile Include="CAsync\05SignalManualReset.cs" />
+    <Compile Include="CAsync\06AsyncIO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ABasics\02SharedResources.cs" />
     <Compile Include="ABasics\04ThreadPoolDemo.cs" />

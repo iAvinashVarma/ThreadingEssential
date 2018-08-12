@@ -1,20 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LearnInfra.Extension;
 using LearnInfra.Interface;
+using System.Reflection;
+using System.Text;
 using ThreadingEssential.ABasics;
 
 namespace LearnEssential.Learn
 {
-	class BasicFactory : ILearnerFactory
+	internal class BasicFactory : ILearnerFactory
 	{
 		public string Help
 		{
 			get
 			{
 				var sb = new StringBuilder();
+				var learning = Classes.GetTypesInNamespace<ILearner>(Assembly.LoadFrom("ThreadingEssential.dll"), "ThreadingEssential.ABasics");
 				sb.AppendLine("** I. Introduction to Threading **");
 				sb.AppendLine("1 => ContextSwitching");
 				sb.AppendLine("2 => SharedResources");
