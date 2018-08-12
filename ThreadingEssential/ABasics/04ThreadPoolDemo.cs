@@ -1,7 +1,8 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra;
+using LearnInfra.Interface;
+using LearnInfra.Model;
 using System;
 using System.Threading;
-using ThreadingEssential.Model;
 
 namespace ThreadingEssential.ABasics
 {
@@ -12,7 +13,7 @@ namespace ThreadingEssential.ABasics
 			var employee = new Employee
 			{
 				Name = "Avinash",
-				Company = "NCR"
+				Company = "AVCorp"
 			};
 			ThreadPool.QueueUserWorkItem(new WaitCallback(Display), employee);
 			var processorCount = Environment.ProcessorCount;

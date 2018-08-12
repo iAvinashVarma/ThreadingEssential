@@ -1,4 +1,4 @@
-﻿namespace LearnEssential.Interface
+﻿namespace LearnInfra.Interface
 {
 	public interface ILearner
 	{

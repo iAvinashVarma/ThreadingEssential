@@ -1,11 +1,11 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ThreadingEssential.BAdvanced
 {
-	internal class ThreadSafety : ILearner
+	public class ThreadSafety : ILearner
 	{
 		private Dictionary<int, string> items = new Dictionary<int, string>();
 

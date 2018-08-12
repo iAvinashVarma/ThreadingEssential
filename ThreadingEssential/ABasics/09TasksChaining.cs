@@ -1,10 +1,10 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Threading.Tasks;
 
 namespace ThreadingEssential.ABasics
 {
-	internal class TasksChaining : ILearner
+	public class TasksChaining : ILearner
 	{
 		public void Practice(string[] args)
 		{

@@ -1,6 +1,6 @@
-﻿namespace ThreadingEssential.Model
+﻿namespace LearnInfra.Model
 {
-	internal class Person
+	public class Person
 	{
 		private int id;
 

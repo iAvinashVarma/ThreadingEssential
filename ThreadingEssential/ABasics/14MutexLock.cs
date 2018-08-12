@@ -1,11 +1,11 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace ThreadingEssential.ABasics
 {
-	internal class MutexLock : ILearner
+	public class MutexLock : ILearner
 	{
 		private static Mutex mutex = new Mutex();
 

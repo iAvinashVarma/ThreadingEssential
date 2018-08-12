@@ -37,7 +37,7 @@ namespace AsyncEssentialUnitTest
 				sqlConnection.Open();
 				var sqlCommand = new SqlCommand(sqlSelect, sqlConnection);
 				var callback = new AsyncCallback(DataAvailable);
-				var asyncResult = sqlCommand.BeginExecuteReader(callback, sqlCommand);
+				var asyAVCorpesult = sqlCommand.BeginExecuteReader(callback, sqlCommand);
 			}
 		}
 
@@ -49,15 +49,15 @@ namespace AsyncEssentialUnitTest
 				sqlConnection.Open();
 				var sqlCommand = new SqlCommand(sqlSelect, sqlConnection);
 				var callback = new AsyncCallback(DataAvailable);
-				var asyncResult = sqlCommand.BeginExecuteReader(callback, sqlCommand);
-				asyncResult.AsyncWaitHandle.WaitOne();
+				var asyAVCorpesult = sqlCommand.BeginExecuteReader(callback, sqlCommand);
+				asyAVCorpesult.AsyncWaitHandle.WaitOne();
 			}
 		}
 
-		private void DataAvailable(IAsyncResult asyncResult)
+		private void DataAvailable(IAsyncResult asyAVCorpesult)
 		{
-			var sqlCommand = asyncResult.AsyncState as SqlCommand;
-			using (var reader = sqlCommand.EndExecuteReader(asyncResult))
+			var sqlCommand = asyAVCorpesult.AsyncState as SqlCommand;
+			using (var reader = sqlCommand.EndExecuteReader(asyAVCorpesult))
 			{
 				while (reader.Read())
 				{

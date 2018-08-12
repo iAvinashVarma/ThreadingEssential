@@ -1,7 +1,11 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Enums;
+using LearnInfra.Interface;
+using LearnInfra.Extension;
 using System;
+using System.Linq;
+using System.Reflection;
 
-namespace ThreadingEssential.Learn
+namespace LearnEssential.Learn
 {
 	public class Ing : ILearner
 	{
@@ -16,11 +20,11 @@ namespace ThreadingEssential.Learn
 
 		public void Practice(string[] args)
 		{
-			Console.Write("Enter Mode (1 => Basics / 2 => Advanced / 3 => Async) : ");
+			Console.Write($"Enter Mode {string.Join(", ", ((EssentialMode)1).GetDictionary().Select(x => $"{x.Key} => {x.Value}"))} : ");
 			int.TryParse(Console.ReadLine(), out int mode);
 			var essentialMode = mode != 0 ? (EssentialMode)mode : EssentialMode.Basic;
 			var factory = new LearnerFactory(essentialMode);
-			Console.Write("{0} Concepts:{1}{2}Enter {0} concept number (E.g. 1) : ", essentialMode, Environment.NewLine, factory.ConceptHelp);
+			Console.Write("{0} Concepts:{1}{2}Enter {0} concept number (E.g. 1) : ", essentialMode, Environment.NewLine, factory.Help);
 			int.TryParse(Console.ReadLine(), out int result);
 			ILearner learner = factory.GetLearner(result);
 			Console.WriteLine(seperator);

@@ -1,9 +1,9 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System.Threading.Tasks;
 
 namespace ThreadingEssential.ABasics
 {
-	internal class NestedLocks : ILearner
+	public class NestedLocks : ILearner
 	{
 		private static object caztonLock = new object();
 

@@ -22,14 +22,14 @@ namespace AsyncEssentialUnitTest
 			Debug.WriteLine($"Demo One Thread: {Thread.CurrentThread.ManagedThreadId}");
 			var doWork = new DoWorkDelegate(DoWork);
 			var asyncCallback = new AsyncCallback(TheCallBack);
-			var asyncResult = doWork.BeginInvoke(asyncCallback, doWork);
-			asyncResult.AsyncWaitHandle.WaitOne();
+			var asyAVCorpesult = doWork.BeginInvoke(asyncCallback, doWork);
+			asyAVCorpesult.AsyncWaitHandle.WaitOne();
 		}
 
-		private void TheCallBack(IAsyncResult asyncResult)
+		private void TheCallBack(IAsyncResult asyAVCorpesult)
 		{
-			var doWork = asyncResult.AsyncState as DoWorkDelegate;
-			doWork.EndInvoke(asyncResult);
+			var doWork = asyAVCorpesult.AsyncState as DoWorkDelegate;
+			doWork.EndInvoke(asyAVCorpesult);
 		}
 	}
 }

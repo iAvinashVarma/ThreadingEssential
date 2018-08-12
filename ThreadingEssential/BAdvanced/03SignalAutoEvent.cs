@@ -1,11 +1,11 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace ThreadingEssential.BAdvanced
 {
-	internal class SignalAutoEvent : ILearner
+	public class SignalAutoEvent : ILearner
 	{
 		//EventWaitHandle eventWaitHandle = new EventWaitHandle(false, EventResetMode.AutoReset);
 		private AutoResetEvent autoResetEvent = new AutoResetEvent(false);

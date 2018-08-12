@@ -1,11 +1,11 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace ThreadingEssential.BAdvanced
 {
-	internal class TPLIntro : ILearner
+	public class TPLIntro : ILearner
 	{
 		public void Practice(string[] args)
 		{

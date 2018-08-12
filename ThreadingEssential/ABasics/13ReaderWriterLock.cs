@@ -1,4 +1,4 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ThreadingEssential.ABasics
 {
-	internal class ReaderWriterLock : ILearner
+	public class ReaderWriterLock : ILearner
 	{
 		private static ReaderWriterLockSlim readerWriterLockSlim = new ReaderWriterLockSlim();
 		private static Dictionary<int, string> persons = new Dictionary<int, string>();

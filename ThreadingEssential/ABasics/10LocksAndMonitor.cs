@@ -1,11 +1,12 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra;
+using LearnInfra.Interface;
+using LearnInfra.Model;
 using System;
 using System.Threading.Tasks;
-using ThreadingEssential.Model;
 
 namespace ThreadingEssential.ABasics
 {
-	internal class LocksAndMonitor : ILearner
+	public class LocksAndMonitor : ILearner
 	{
 		public void Practice(string[] args)
 		{

@@ -1,6 +1,6 @@
-﻿namespace ThreadingEssential.Model
+﻿namespace LearnInfra.Model
 {
-	internal class Product
+	public class Product
 	{
 		private int id;
 

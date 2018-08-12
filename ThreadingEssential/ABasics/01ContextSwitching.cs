@@ -1,10 +1,10 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Threading;
 
 namespace ThreadingEssential.ABasics
 {
-	internal class ContextSwitching : ILearner
+	public class ContextSwitching : ILearner
 	{
 		private int _count;
 

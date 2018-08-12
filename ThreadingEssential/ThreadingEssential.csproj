@@ -5,12 +5,27 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0334ABAA-DC3B-4485-9B9B-24422CC118D5}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>ThreadingEssential</RootNamespace>
     <AssemblyName>ThreadingEssential</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -76,17 +91,9 @@
     <Compile Include="BAdvanced\15PLINQMergeOptions.cs" />
     <Compile Include="BAdvanced\16TAPIntro.cs" />
     <Compile Include="CAsync\01DownloadWinForm.cs" />
-    <Compile Include="Extension\Enumerables.cs" />
-    <Compile Include="Learn\LearnerFactory.cs" />
-    <Compile Include="Model\Account.cs" />
-    <Compile Include="Model\Employee.cs" />
-    <Compile Include="Model\Person.cs" />
-    <Compile Include="Model\Product.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ABasics\02SharedResources.cs" />
     <Compile Include="ABasics\04ThreadPoolDemo.cs" />
-    <Compile Include="Learn\Ing.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -96,15 +103,26 @@
       <Project>{8254c9e1-2e84-4011-8f7e-723e5369de0d}</Project>
       <Name>DownloadForm</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LearnEssential\LearnEssential.csproj">
-      <Project>{51b8e6a1-1fe9-48a6-99ab-6612369a6d6c}</Project>
-      <Name>LearnEssential</Name>
+    <ProjectReference Include="..\LearnInfra\LearnInfra.csproj">
+      <Project>{2E8566D9-5C38-40A2-B16B-10910AF6B256}</Project>
+      <Name>LearnInfra</Name>
     </ProjectReference>
     <ProjectReference Include="..\ThreadAffinity\ThreadAffinity.csproj">
       <Project>{18a3d088-84d6-46c5-a86e-d6325e49cc95}</Project>
       <Name>ThreadAffinity</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

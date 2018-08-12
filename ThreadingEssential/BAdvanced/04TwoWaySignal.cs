@@ -1,11 +1,11 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace ThreadingEssential.BAdvanced
 {
-	internal class TwoWaySignal : ILearner
+	public class TwoWaySignal : ILearner
 	{
 		private EventWaitHandle first = new AutoResetEvent(false);
 		private EventWaitHandle second = new AutoResetEvent(false);

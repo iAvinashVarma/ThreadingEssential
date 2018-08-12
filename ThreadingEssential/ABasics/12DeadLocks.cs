@@ -1,10 +1,10 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Threading;
 
 namespace ThreadingEssential.ABasics
 {
-	internal class DeadLocks : ILearner
+	public class DeadLocks : ILearner
 	{
 		private static object caztonLock = new object();
 		private static object avLock = new object();

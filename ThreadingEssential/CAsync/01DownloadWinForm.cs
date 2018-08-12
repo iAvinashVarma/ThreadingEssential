@@ -1,9 +1,9 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System.Diagnostics;
 
 namespace ThreadingEssential.CAsync
 {
-	class DownloadWinForm : ILearner
+	public class DownloadWinForm : ILearner
 	{
 		public void Practice(string[] args)
 		{

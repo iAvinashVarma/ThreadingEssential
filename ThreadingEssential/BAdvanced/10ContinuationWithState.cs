@@ -1,14 +1,15 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra;
+using LearnInfra.Interface;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using ThreadingEssential.Extension;
-using ThreadingEssential.Model;
+using LearnInfra.Extension;
+using LearnInfra.Model;
 
 namespace ThreadingEssential.BAdvanced
 {
-	internal class ContinuationWithState : ILearner
+	public class ContinuationWithState : ILearner
 	{
 		public void Practice(string[] args)
 		{

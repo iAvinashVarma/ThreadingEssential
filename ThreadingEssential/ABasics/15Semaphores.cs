@@ -1,10 +1,10 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Threading;
 
 namespace ThreadingEssential.ABasics
 {
-	internal class Semaphores : ILearner
+	public class Semaphores : ILearner
 	{
 		private static SemaphoreSlim semaphoreSlim = new SemaphoreSlim(3);
 

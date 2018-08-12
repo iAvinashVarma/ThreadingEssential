@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadForm", "DownloadFor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnEssential", "LearnEssential\LearnEssential.csproj", "{51B8E6A1-1FE9-48A6-99AB-6612369A6D6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnInfra", "LearnInfra\LearnInfra.csproj", "{2E8566D9-5C38-40A2-B16B-10910AF6B256}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{51B8E6A1-1FE9-48A6-99AB-6612369A6D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51B8E6A1-1FE9-48A6-99AB-6612369A6D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51B8E6A1-1FE9-48A6-99AB-6612369A6D6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E8566D9-5C38-40A2-B16B-10910AF6B256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E8566D9-5C38-40A2-B16B-10910AF6B256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E8566D9-5C38-40A2-B16B-10910AF6B256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E8566D9-5C38-40A2-B16B-10910AF6B256}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

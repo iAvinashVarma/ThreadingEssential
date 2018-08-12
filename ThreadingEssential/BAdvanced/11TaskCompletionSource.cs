@@ -1,12 +1,13 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra;
+using LearnInfra.Interface;
+using LearnInfra.Model;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using ThreadingEssential.Model;
 
 namespace ThreadingEssential.BAdvanced
 {
-	internal class TaskCompletionSource : ILearner
+	public class TaskCompletionSource : ILearner
 	{
 		public void Practice(string[] args)
 		{

@@ -1,4 +1,4 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Linq;
 using System.Threading;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ThreadingEssential.BAdvanced
 {
-	internal class Cancellation : ILearner
+	public class Cancellation : ILearner
 	{
 		public void Practice(string[] args)
 		{

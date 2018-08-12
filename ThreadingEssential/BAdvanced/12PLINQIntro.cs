@@ -1,4 +1,4 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace ThreadingEssential.BAdvanced
 {
-	internal class PLINQIntro : ILearner
+	public class PLINQIntro : ILearner
 	{
 		public void Practice(string[] args)
 		{

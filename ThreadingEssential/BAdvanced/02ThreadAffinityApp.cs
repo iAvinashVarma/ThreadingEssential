@@ -1,9 +1,9 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System.Diagnostics;
 
 namespace ThreadingEssential.BAdvanced
 {
-	internal class ThreadAffinityApp : ILearner
+	public class ThreadAffinityApp : ILearner
 	{
 		public void Practice(string[] args)
 		{

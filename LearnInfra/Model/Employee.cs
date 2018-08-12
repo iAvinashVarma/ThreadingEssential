@@ -1,4 +1,4 @@
-﻿namespace ThreadingEssential.Model
+﻿namespace LearnInfra.Model
 {
 	public class Employee
 	{

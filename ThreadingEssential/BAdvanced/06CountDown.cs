@@ -1,11 +1,11 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace ThreadingEssential.BAdvanced
 {
-	internal class CountDown : ILearner
+	public class CountDown : ILearner
 	{
 		private CountdownEvent countdownEvent = new CountdownEvent(5);
 

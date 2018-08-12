@@ -1,9 +1,9 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System.Linq;
 
 namespace ThreadingEssential.BAdvanced
 {
-	internal class PLINQMergeOptions : ILearner
+	public class PLINQMergeOptions : ILearner
 	{
 		public void Practice(string[] args)
 		{

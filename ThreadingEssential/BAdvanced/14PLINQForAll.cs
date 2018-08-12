@@ -1,11 +1,11 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Collections.Concurrent;
 using System.Linq;
 
 namespace ThreadingEssential.BAdvanced
 {
-	internal class PLINQForAll : ILearner
+	public class PLINQForAll : ILearner
 	{
 		public void Practice(string[] args)
 		{

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ThreadingEssential.Extension
+namespace LearnInfra.Extension
 {
 	public static class Enumerables
 	{

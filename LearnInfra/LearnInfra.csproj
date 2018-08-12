@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{51B8E6A1-1FE9-48A6-99AB-6612369A6D6C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{2E8566D9-5C38-40A2-B16B-10910AF6B256}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LearnEssential</RootNamespace>
-    <AssemblyName>LearnEssential</AssemblyName>
+    <RootNamespace>LearnInfra</RootNamespace>
+    <AssemblyName>LearnInfra</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -29,9 +29,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,32 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Learn\AdvancedFactory.cs" />
-    <Compile Include="Learn\AsyncFactory.cs" />
-    <Compile Include="Learn\ILearnerFactory.cs" />
-    <Compile Include="Learn\Ing.cs" />
-    <Compile Include="Learn\BasicFactory.cs" />
-    <Compile Include="Learn\LearnerFactory.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Extension\Classes.cs" />
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="Enums\EssentialMode.cs" />
+    <Compile Include="Extension\Enumerables.cs" />
+    <Compile Include="Extension\Enumerations.cs" />
+    <Compile Include="Interface\ILearner.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DownloadForm\DownloadForm.csproj">
-      <Project>{8254c9e1-2e84-4011-8f7e-723e5369de0d}</Project>
-      <Name>DownloadForm</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LearnInfra\LearnInfra.csproj">
-      <Project>{2E8566D9-5C38-40A2-B16B-10910AF6B256}</Project>
-      <Name>LearnInfra</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ThreadAffinity\ThreadAffinity.csproj">
-      <Project>{18a3d088-84d6-46c5-a86e-d6325e49cc95}</Project>
-      <Name>ThreadAffinity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ThreadingEssential\ThreadingEssential.csproj">
-      <Project>{0334abaa-dc3b-4485-9b9b-24422cc118d5}</Project>
-      <Name>ThreadingEssential</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

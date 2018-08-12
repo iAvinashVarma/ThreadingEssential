@@ -1,4 +1,4 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,11 +7,11 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using ThreadingEssential.Extension;
+using LearnInfra.Extension;
 
 namespace ThreadingEssential.BAdvanced
 {
-	internal class ParallelVsNormal : ILearner
+	public class ParallelVsNormal : ILearner
 	{
 		public void Practice(string[] args)
 		{

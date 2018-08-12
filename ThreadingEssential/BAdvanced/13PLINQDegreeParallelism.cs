@@ -1,4 +1,4 @@
-﻿using LearnEssential.Interface;
+﻿using LearnInfra.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Net.NetworkInformation;
 
 namespace ThreadingEssential.BAdvanced
 {
-	internal class PLINQDegreeParallelism : ILearner
+	public class PLINQDegreeParallelism : ILearner
 	{
 		public void Practice(string[] args)
 		{

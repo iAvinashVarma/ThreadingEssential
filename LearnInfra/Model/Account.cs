@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading;
 
-namespace ThreadingEssential.Model
+namespace LearnInfra.Model
 {
-	internal class Account
+	public class Account
 	{
 		private int balance;
 		private object caztonLock = new object();
