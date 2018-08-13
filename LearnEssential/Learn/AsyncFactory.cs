@@ -23,6 +23,9 @@ namespace LearnEssential.Learn
 				sb.AppendLine("5 => SignalManualReset");
 				sb.AppendLine("** III. Less Hard MultiThreading **");
 				sb.AppendLine("6 => AsyncIO");
+				sb.AppendLine("7 => TPLDemo");
+				sb.AppendLine("** IV. Async and Await **");
+				sb.AppendLine("8 => Async and Await");
 				return sb.ToString();
 			}
 		}
@@ -54,6 +57,14 @@ namespace LearnEssential.Learn
 
 				case 6:
 					learner = new AsyncIO();
+					break;
+
+				case 7:
+					learner = new TPLDemo();
+					break;
+
+				case 8:
+					learner = new AsyncAndAwait();
 					break;
 
 				default:

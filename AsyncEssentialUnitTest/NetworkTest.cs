@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace AsyncEssentialUnitTest
 {
@@ -13,7 +14,7 @@ namespace AsyncEssentialUnitTest
 		[TestMethod]
 		public void DownloadLinkSyncTest()
 		{
-			var httpRequestInfo = HttpWebRequest.CreateHttp(url);
+			var httpRequestInfo = WebRequest.CreateHttp(url);
 			var httpResponseInfo = httpRequestInfo.GetResponse() as HttpWebResponse;
 			var responseStream = httpResponseInfo.GetResponseStream();
 			using (var sr = new StreamReader(responseStream))
@@ -23,26 +24,57 @@ namespace AsyncEssentialUnitTest
 		}
 
 		[TestMethod]
-		public void DownloadLinkTestAsync()
+		public void DownloadLinkBeginEndTest()
 		{
-			var httpRequestInfo = HttpWebRequest.CreateHttp(url);
+			var httpRequestInfo = WebRequest.CreateHttp(url);
 			var httpCallback = new AsyncCallback(HttpResponseAvailable);
-			var asyAVCorpesult = httpRequestInfo.BeginGetResponse(httpCallback, httpRequestInfo);
+			var asyncResult = httpRequestInfo.BeginGetResponse(httpCallback, httpRequestInfo);
 		}
 
 		[TestMethod]
-		public void DownloadLinkTestSignalling()
+		public void DownloadLinkAsyncTaskTest()
 		{
 			var httpRequestInfo = HttpWebRequest.CreateHttp(url);
-			var httpCallback = new AsyncCallback(HttpResponseAvailable);
-			var asyAVCorpesult = httpRequestInfo.BeginGetResponse(httpCallback, httpRequestInfo);
-			asyAVCorpesult.AsyncWaitHandle.WaitOne();
+			var taskWebResponse = httpRequestInfo.GetResponseAsync();
+			var taskContinuation = taskWebResponse.ContinueWith(HttpResponseContinuation, TaskContinuationOptions.OnlyOnRanToCompletion);
+			Task.WaitAll(taskWebResponse, taskContinuation);
 		}
 
-		private void HttpResponseAvailable(IAsyncResult asyAVCorpesult)
+		[TestMethod]
+		public void DownloadLinkBeginEndSignalTest()
 		{
-			var httpRequestInfo = asyAVCorpesult.AsyncState as HttpWebRequest;
-			var httpResponseInfo = httpRequestInfo.EndGetResponse(asyAVCorpesult) as HttpWebResponse;
+			var httpRequestInfo = WebRequest.CreateHttp(url);
+			var httpCallback = new AsyncCallback(HttpResponseAvailable);
+			var asyncResult = httpRequestInfo.BeginGetResponse(httpCallback, httpRequestInfo);
+			asyncResult.AsyncWaitHandle.WaitOne();
+		}
+
+		[TestMethod]
+		public async Task DownloadLinkAsyncAwaitTest()
+		{
+			var httpRequestInfo = WebRequest.CreateHttp(url);
+			var httpResponseInfo = await httpRequestInfo.GetResponseAsync();
+			var responseStream = httpResponseInfo.GetResponseStream();
+			using (var sr = new StreamReader(responseStream))
+			{
+				var webPage = await sr.ReadToEndAsync();
+			}
+		}
+
+		private void HttpResponseAvailable(IAsyncResult asyncResult)
+		{
+			var httpRequestInfo = asyncResult.AsyncState as HttpWebRequest;
+			var httpResponseInfo = httpRequestInfo.EndGetResponse(asyncResult) as HttpWebResponse;
+			var responseStream = httpResponseInfo.GetResponseStream();
+			using (var sr = new StreamReader(responseStream))
+			{
+				var webPage = sr.ReadToEnd();
+			}
+		}
+
+		private void HttpResponseContinuation(Task<WebResponse> taskWebResponse)
+		{
+			var httpResponseInfo = taskWebResponse.Result as WebResponse;
 			var responseStream = httpResponseInfo.GetResponseStream();
 			using (var sr = new StreamReader(responseStream))
 			{
