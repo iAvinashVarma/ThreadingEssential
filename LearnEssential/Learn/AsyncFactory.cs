@@ -26,6 +26,7 @@ namespace LearnEssential.Learn
 				sb.AppendLine("7 => TPLDemo");
 				sb.AppendLine("** IV. Async and Await **");
 				sb.AppendLine("8 => Async and Await");
+				sb.AppendLine("9 => ConcurrentQueueDemo");
 				return sb.ToString();
 			}
 		}
@@ -65,6 +66,10 @@ namespace LearnEssential.Learn
 
 				case 8:
 					learner = new AsyncAndAwait();
+					break;
+
+				case 9:
+					learner = new ConcurrentQueueDemo();
 					break;
 
 				default:

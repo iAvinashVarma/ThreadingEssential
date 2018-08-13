@@ -1,10 +1,7 @@
 ﻿using LearnInfra.Interface;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace ThreadingEssential.CAsync
 {
@@ -51,7 +48,7 @@ namespace ThreadingEssential.CAsync
 				for (int i = 0; i < 1000; i++)
 				{
 					numbers.Add(i);
-				} 
+				}
 			}
 		}
 	}

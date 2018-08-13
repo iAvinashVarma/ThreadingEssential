@@ -98,6 +98,7 @@
     <Compile Include="CAsync\06AsyncIO.cs" />
     <Compile Include="CAsync\07TPLDemo.cs" />
     <Compile Include="CAsync\08AsyncAndAwait.cs" />
+    <Compile Include="CAsync\09ConcurrentQueueDemo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ABasics\02SharedResources.cs" />
     <Compile Include="ABasics\04ThreadPoolDemo.cs" />

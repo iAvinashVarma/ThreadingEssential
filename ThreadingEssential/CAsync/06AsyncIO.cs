@@ -1,8 +1,5 @@
 ﻿using LearnInfra.Interface;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ThreadingEssential.CAsync
@@ -31,7 +28,6 @@ namespace ThreadingEssential.CAsync
 			var taskFactory = new TaskFactory();
 			taskFactory.StartNew(() =>
 			{
-
 			});
 		}
 	}

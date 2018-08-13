@@ -12,7 +12,7 @@ namespace AsyncEssentialUnitTest
 	{
 		private const string connectionString = "Integrated Security=SSPI;Data Source=WINAK185312-FUI;Initial Catalog=Sample;Persist Security Info=False;Integrated Security=True";
 		private const string sqlSelect = "SELECT @@VERSION";
-		ManualResetEvent manualResetEvent = new ManualResetEvent(false);
+		private ManualResetEvent manualResetEvent = new ManualResetEvent(false);
 
 		[TestMethod]
 		public void DatabaseSyncTest()
