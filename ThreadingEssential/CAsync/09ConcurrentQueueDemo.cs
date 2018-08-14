@@ -41,7 +41,7 @@ namespace ThreadingEssential.CAsync
 
 		private void GenerateFibanocii()
 		{
-			for (ushort i = 1; i <= 50; i++)
+			for (ushort i = 0; i < 50; i++)
 			{
 				Thread.Sleep(random.Next(1, 500));
 				var f = Fibonacci(i);
@@ -50,13 +50,13 @@ namespace ThreadingEssential.CAsync
 			}
 		}
 
-		public ulong Fibonacci(ushort number) => number == 0 ? 0 : GetFibonacci(number);
+		private ulong Fibonacci(ushort number) => number == 0 ? 0 : GetFibonacci(number);
 
 		private ulong GetFibonacci(ushort number)
 		{
 			ulong previous = 0;
 			ulong before = 1;
-			for (int i = 0; i < number - 1; i++)
+			for (int i = 1; i < number; i++)
 			{
 				ulong next = checked(previous + before);
 				previous = before;
