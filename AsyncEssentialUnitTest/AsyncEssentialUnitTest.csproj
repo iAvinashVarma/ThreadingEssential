@@ -52,7 +52,6 @@
     <Compile Include="DelegatesTest.cs" />
     <Compile Include="NetworkTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DatabasesTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
